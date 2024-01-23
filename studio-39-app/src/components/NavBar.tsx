@@ -1,8 +1,8 @@
-import { Outlet, Link } from 'react-router-dom';
-import { useState } from 'react';
-import Footer from './Footer';
-import Hamburger from 'hamburger-react';
-import ModalMenu from './ModalMenu';
+import { Outlet, Link } from "react-router-dom";
+import { useState } from "react";
+import Footer from "./Footer";
+import Hamburger from "hamburger-react";
+import ModalMenu from "./ModalMenu";
 
 export default function NavBar() {
   const [isOpen, setOpen] = useState(false);
@@ -13,7 +13,7 @@ export default function NavBar() {
         <nav className="flex h-full justify-between">
           <div className="flex items-center w-[33vw] justify-between">
             <h2 className="ml-5 text-base md:text-xl font-bold text-white text-center">
-              Studio 39 Productions
+              Studio 39 Production
             </h2>
           </div>
           <div className="sm:flex items-center justify-around w-[66vw] hidden sm:text-xs md:text-sm lg:text-base 2xl:text-lg">
@@ -57,12 +57,7 @@ export default function NavBar() {
       <div className="bottom-0 left-0 fixed w-full">
         <Footer />
       </div>
-      {isOpen && (
-        <ModalMenu
-          isOpen={isOpen}
-          setOpen={setOpen}
-        />
-      )}
+      {isOpen && <ModalMenu isOpen={isOpen} setOpen={setOpen} />}
     </div>
   );
 }
