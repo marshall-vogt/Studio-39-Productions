@@ -8,13 +8,16 @@ export default function NavBar() {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div className="flex flex-col">
-      <div className="h-[7vh] rounded-md bg-[#310a5d]">
-        <nav className="flex h-full justify-between">
-          <div className="flex items-center w-[33vw] justify-between">
-            <h2 className="ml-5 text-base md:text-xl font-bold text-white text-center">
-              Studio 39 Production
-            </h2>
+    <div>
+      <div className="bg-[#310a5d]">
+        <nav className="flex w-full justify-between container mx-auto">
+          <div className="flex items-center">
+            <div className="h-20 w-20 my-2">
+              <img src="/images/logo1.png" className="rounded-full" />
+            </div>
+            <div className="text-white text-lg font-bold ps-3">
+              Studio 39 Productions
+            </div>
           </div>
           <div className="sm:flex items-center justify-around w-[66vw] hidden sm:text-xs md:text-sm lg:text-base 2xl:text-lg">
             <Link to="/">
@@ -54,7 +57,7 @@ export default function NavBar() {
         </nav>
       </div>
       <Outlet />
-      <div className="bottom-0 left-0 fixed w-full">
+      <div className="bottom-0 left-0 w-full">
         <Footer />
       </div>
       {isOpen && <ModalMenu isOpen={isOpen} setOpen={setOpen} />}

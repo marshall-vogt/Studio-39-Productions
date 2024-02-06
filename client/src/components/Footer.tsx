@@ -1,12 +1,10 @@
 export default function Footer() {
   return (
     <>
-      <div className="mt-auto bg-[#310a5d] w-full h-[10vh] flex items-end justify-center sm:justify-between text-white font-light">
-        <div className="sm:ml-5 bg-[#8368a6] p-2 round h-[8vh] flex flex-col items-center justify-center rounded-sm text-xs">
+      <div className="flex bg-[#310a5d] h-[10vh] p-3">
+        <div className="bg-[#8368a6] flex flex-col justify-center p-3 text-white text-xs font-light ">
           <div>&copy; Studio 39 Productions. All rights reserved.</div>
-          <div className="underline">Privacy Policy</div>
-        </div>
-        <div className="w-[25vw] h-full hidden sm:block">
+          <div className="underline text-center">Privacy Policy</div>
         </div>
       </div>
     </>
